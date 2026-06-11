@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/Assignment-1.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
+    <file url="file://$PROJECT_DIR$/Assignment-2.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
+    <file url="file://$PROJECT_DIR$/Assignment-3.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
     <file url="file://$PROJECT_DIR$/Assignment-4.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
+    <file url="file://$PROJECT_DIR$/Assignment-5.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
+    <file url="file://$PROJECT_DIR$/Assignment-7.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
+    <file url="file://$PROJECT_DIR$/Assignment-9.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
     <file url="file://$PROJECT_DIR$/Assingment-6.sql" value="a61fa37b-598f-4ac7-9c80-48308266dc59" />
   </component>
 </project>
