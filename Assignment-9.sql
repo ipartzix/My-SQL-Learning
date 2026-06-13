@@ -99,6 +99,8 @@ JOIN MOVIE M
 ON I.MV_NO = M.MV_NO
 WHERE M.TYPE = 'Action';
 
+
+
 SELECT
     CONCAT(
         'The movie taken by ',
