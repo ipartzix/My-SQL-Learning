@@ -1,0 +1,105 @@
+CREATE DATABASE mydb;
+
+USE mydb;
+CREATE TABLE EMP (
+    E_ID      NUMERIC(6) PRIMARY KEY,
+    FNAME     VARCHAR(30) NOT NULL,
+    LNAME     VARCHAR(30) NOT NULL,
+    HIRE_DATE DATE NOT NULL,
+    JOB_ID    VARCHAR(10) NOT NULL,
+    SAL       NUMERIC(8,2) NOT NULL,
+    DEPT_ID   NUMERIC(4) CHECK (DEPT_ID >= 10)
+);
+
+INSERT INTO EMP VALUES
+(198, 'Donald',   'Connell',   '1999-06-21', 'SH_CLERK', 2600, 50),
+(199, 'Douglas',  'Grant',     '1998-01-13', 'SH_CLERK', 3000, 50),
+(200, 'Jennifer', 'Whalen',    '1987-09-17', 'AD_ASST',  4400, 10),
+(201, 'Michael',  'Hartstein', '1999-01-19', 'IT_PROG',  6000, 20),
+(202, 'Pat',      'Fay',       '1989-10-25', 'AC_MGR',   6500, 20),
+(203, 'Susan',    'Mavris',    '1976-11-26', 'AD_VP',    7500, 40),
+(204, 'Hermann',  'Baer',      '1995-08-23', 'AD_PRES',  9500, 90),
+(205, 'Shelley',  'Higgins',   '1998-02-24', 'AC_MGR',   2300, 60),
+(206, 'William',  'Gietz',     '2001-03-12', 'IT_PROG',  5000, 60),
+(100, 'Steven',   'King',      '2002-06-15', 'AD_ASST',  8956, 100),
+(101, 'Neena',    'Kochar',    '2003-07-10', 'SH_CLERK', 3400, 30);
+
+SELECT * FROM EMP;
+
+SELECT DEPT_ID, MIN(SAL) AS MIN_SALARY
+FROM EMP
+GROUP BY DEPT_ID
+HAVING MIN(SAL) > 3000
+ORDER BY MIN_SALARY DESC;
+
+SELECT CONCAT(
+    FNAME,
+    ' whose designation is ',
+    JOB_ID,
+    ' gets ',
+    SAL,
+    ' but wants to earn ',
+    3 * SAL,
+    '.'
+) AS DETAILS
+FROM EMP;
+
+SELECT CONCAT(
+    E_ID, ', ',
+    FNAME, ', ',
+    LNAME, ', ',
+    DATE_FORMAT(HIRE_DATE, '%d-%b-%y'), ', ',
+    JOB_ID, ', ',
+    SAL, ', ',
+    DEPT_ID
+) AS EMPLOYEE_DETAILS
+FROM EMP;
+
+SELECT CURDATE() AS TODAY;
+
+SELECT
+    E_ID AS EMPLOYEE_ID,
+    DAY(HIRE_DATE) AS DAY_HIRED,
+    YEAR(HIRE_DATE) AS YEAR_HIRED
+FROM EMP;
+
+SELECT
+    CONCAT(FNAME, ' ', LNAME) AS EMPLOYEE_NAME,
+    DATE_FORMAT(HIRE_DATE, '%d-%M-%y') AS HIRE_DATE
+FROM EMP;
+
+SELECT
+    E_ID AS EMPLOYEE_ID,
+    MONTHNAME(HIRE_DATE) AS HIRE_MONTH
+FROM EMP;
+
+SELECT
+    E_ID AS EMPLOYEE_ID,
+    CONCAT(FNAME, ' ', LNAME) AS EMPLOYEE_NAME,
+    DATE_FORMAT(HIRE_DATE, '%d-%b-%Y') AS HIRE_DATE
+FROM EMP;
+
+SELECT CASE YEAR(CURDATE())
+    WHEN 2026 THEN 'Two Thousand Twenty Six'
+    WHEN 2025 THEN 'Two Thousand Twenty Five'
+    WHEN 2024 THEN 'Two Thousand Twenty Four'
+    ELSE 'Year not defined'
+END AS YEAR_IN_WORDS;
+
+
+SELECT
+    CURDATE() AS TODAY,
+    DATE_ADD(CURDATE(), INTERVAL 15 DAY) AS AFTER_15_DAYS,
+    DATE_SUB(CURDATE(), INTERVAL 15 DAY) AS BEFORE_15_DAYS;
+
+ALTER TABLE EMP
+ADD PRIMARY KEY (E_ID);
+
+ALTER TABLE EMP
+ADD CONSTRAINT chk_dept
+CHECK (DEPT_ID >= 10);
+
+ALTER TABLE EMP
+DROP PRIMARY KEY;
+
+DROP TABLE EMP;
