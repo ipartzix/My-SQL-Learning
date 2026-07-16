@@ -11,3 +11,10 @@ create table users(
 );
 
 SELECT  * FROM users;
+
+
+-- (--) use for comment
+
+-- for complete table delete we do drop
+
+DROP DATABASE learndb ;
