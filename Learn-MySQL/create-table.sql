@@ -17,4 +17,4 @@ SELECT  * FROM users;
 
 -- for complete table delete we do drop
 
-DROP DATABASE learndb ;
+-- DROP DATABASE learndb ;
