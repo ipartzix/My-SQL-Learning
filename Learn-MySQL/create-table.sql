@@ -18,3 +18,7 @@ SELECT  * FROM users;
 -- for complete table delete we do drop
 
 -- DROP DATABASE learndb ;
+
+-- select specific columns
+
+SELECT name, email FROM users;
