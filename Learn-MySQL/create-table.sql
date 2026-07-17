@@ -36,3 +36,19 @@ RENAME TABLE customers TO users;
 
 
 SELECT  * FROM users;
+
+-- Altering a Table
+
+
+-- Add a Column
+ALTER TABLE users ADD COLUMN is_active BOOLEAN DEFAULT TRUE;
+-- Drop a Column
+ALTER TABLE users DROP COLUMN is_active;
+
+SELECT * FROM users;
+
+-- Modify a Column Type
+ALTER TABLE users MODIFY COLUMN name VARCHAR(150);
+
+
+SELECT * FROM users;
