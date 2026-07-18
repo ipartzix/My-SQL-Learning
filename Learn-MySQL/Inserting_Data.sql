@@ -26,3 +26,6 @@ INSERT INTO emp (name, email, gender, date_of_birth) VALUES
 ('David', 'david@example.com', 'Male', '2000-08-09'),
 ('Eva', 'eva@example.com', 'Female', '1993-12-30');
 
+
+-- Select individual columns from table
+SELECT name, email FROM emp;
