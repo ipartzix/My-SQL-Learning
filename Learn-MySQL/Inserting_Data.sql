@@ -10,3 +10,7 @@ CREATE TABLE emp (
 );
 SELECT * FROM emp;
 INSERT INTO emp VALUES(1, 'Alice', 'alice@example.com', 'Female', '1995-05-14', DEFAULT);
+
+-- insert data into specific columns
+INSERT INTO emp (name, email, gender, date_of_birth) VALUES
+('Bob', 'bob@example.com', 'Male', '1990-11-23');
