@@ -29,3 +29,5 @@ INSERT INTO emp (name, email, gender, date_of_birth) VALUES
 
 -- Select individual columns from table
 SELECT name, email FROM emp;
+
+-- Filter ROW with Where --
