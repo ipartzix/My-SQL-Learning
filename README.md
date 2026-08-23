@@ -1,6 +1,6 @@
-# MySQL Learning
+# PostgreSQL Learning
 
-A structured repository documenting my journey of learning **MySQL** through hands-on practice. It includes learning notes, SQL queries, practice exercises, college assignments, and mini projects. This repository serves as a personal knowledge base while building database skills for both **Software Development Engineering (SDE)** and **AI/ML Engineering**.
+A structured repository documenting my journey of learning **PostgreSQL** through hands-on practice. It includes learning notes, SQL queries, practice exercises, college assignments, and mini projects. This repository serves as a personal knowledge base while building database skills for both **Software Development Engineering (SDE)** and **AI/ML Engineering**.
 
 ## Repository Contents
 
@@ -23,7 +23,7 @@ A structured repository documenting my journey of learning **MySQL** through han
 
 > **Note:** This repository is continuously updated as I learn new MySQL concepts and complete additional practice exercises, assignments, and projects.
 
-## Why I'm Learning MySQL
+## Why I'm Learning PostgreSQL
 
 ### Software Development (SDE)
 
@@ -43,11 +43,10 @@ A structured repository documenting my journey of learning **MySQL** through han
 
 ## Tech Stack
 
-- MySQL
+- PostgreSQL
 - SQL
 - DataGrip
-- MySQL Workbench
-- VS Code
+-- VS Code
 - Git & GitHub
 
 ## Repository Goals
