@@ -10,8 +10,6 @@ create table users(
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 SELECT  * FROM users;
-
-
 -- (--) use for comment
 
 -- for complete table delete we do drop
