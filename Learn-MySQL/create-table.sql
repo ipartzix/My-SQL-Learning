@@ -9,7 +9,6 @@ create table users(
     date_of_birth DATE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
 SELECT  * FROM users;
 
 
