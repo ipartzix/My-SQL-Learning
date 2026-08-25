@@ -19,8 +19,6 @@ SELECT  * FROM users;
 -- select specific columns
 
 SELECT name, email FROM users;
-
-
 -- Renaming a Table
 
 -- To rename an existing table:
